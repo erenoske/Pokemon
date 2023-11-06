@@ -1,0 +1,112 @@
+@import"https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  }
+
+  *::-webkit-scrollbar {
+    width: 8px;
+    background-color: #d67b8b;
+  }
+  *::-webkit-scrollbar-thumb {
+    background-color: #dab060;
+    border-radius: 4px;
+  }
+
+body {
+    background: linear-gradient(to right, #dab060,#d67b8b);
+}
+.container {
+    max-width: 1620px;
+    margin: auto;
+    margin-top: 10px;
+    padding: 10px;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    grid-template-rows: 1fr;
+    grid-gap: 15px;
+    grid-auto-flow: dense;
+}
+.card {
+    background-color: #ffffffb0;
+    padding: 10px;
+    border-radius: 4px;
+    text-align: center;
+    display: grid;
+    gap: 10px;
+}
+.search-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-top: 10px;
+    padding: 5px;
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%);
+    width: 100%;
+}
+input[type=text] {
+    width:  620px;
+    padding: 0 10px;
+    height: 35px;
+    box-sizing: border-box;
+    border: none;
+    background-color: #ffffffb0;
+    outline: none;
+    border-radius: 4px;
+}
+img {
+    width: 100%;
+}
+.blur-load.loaded > img {
+  opacity: 1;
+}
+.blur-load > img {
+  opacity: 0;
+  transition: opacity 200ms ease-in-out;
+}
+
+.lds-dual-ring {
+    position: absolute;
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.hidden {
+    display: none;
+}
+
+.navbar {
+    height: 45px;
+}
