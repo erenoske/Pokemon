@@ -64,12 +64,23 @@ input[type=text] {
 img {
     width: 100%;
 }
+.blur-load {
+  width: 100%;
+  padding-top: 100%;
+  height: 0;
+}
+.blur-load.loaded {
+  padding-top: 0 !important;
+  height: 100% !important;
+}
 .blur-load.loaded > img {
   opacity: 1;
+  height: 100%;
 }
 .blur-load > img {
   opacity: 0;
   transition: opacity 200ms ease-in-out;
+  height: 0;
 }
 
 .lds-dual-ring {
@@ -109,4 +120,14 @@ img {
 
 .navbar {
     height: 45px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  font-style: italic;
+  background-repeat: no-repeat;
+  background-size: cover;
+  shape-margin: 0.75rem;
 }
